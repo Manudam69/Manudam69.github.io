@@ -11,7 +11,7 @@
 
 - 📫 Correo de contacto **manueldavid@live.com.mx**
 
-- 📄 Conoce sobre mi experiencia [https://manudam69.github.io/Manudam69/](https://manudam69.github.io/Manudam69/)
+- 📄 Conoce sobre mi experiencia [https://manudam69.github.io](https://manudam69.github.io)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
