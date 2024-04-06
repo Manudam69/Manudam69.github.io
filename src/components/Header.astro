@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import ProfileImage from "../assets/images/foto_perfil.jpg";
+---
+
+<section class="flex flex-wrap tablet:flex-nowrap gap-4 mt-[40px]">
+  <Image
+    src={ProfileImage}
+    alt="Foto de perfil"
+    class={"tablet:w-[25%] tablet:h-full my-auto rounded-sm"}
+  />
+  <div>
+    <h1>Manuel David Alonso Muñoz</h1>
+    <span>Desarrollador Web | Frontend y Backend</span>
+    <p class="mt-5">
+      Soy un apasionado ingeniero en sistemas especializado en el desarrollo web
+      full-stack. Mi experiencia abarca tanto el front-end como el back-end. En
+      el ámbito del front-end, he trabajado con frameworks como React, Angular y
+      JQuery, creando interfaces de usuario atractivas e intuitivas que mejoran
+      la experiencia del usuario. En el back-end, mi experiencia se extiende a
+      tecnologías como Node, PHP, Express, así como bases de datos como MongoDB
+      y PostgreSQL. Mi enfoque es crear soluciones web robustas y escalables que
+      satisfagan las necesidades específicas de los usuarios y los objetivos del
+      negocio. Siempre estoy buscando oportunidades para aprender y crecer en
+      este campo dinámico, y estoy emocionado por contribuir a proyectos
+      desafiantes y emocionantes.
+    </p>
+  </div>
+</section>
