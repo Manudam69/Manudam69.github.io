@@ -1,0 +1,35 @@
+---
+interface Props {
+  position: string;
+  company: string;
+  place: string;
+  date: string;
+  stillWorkingThere?: boolean;
+  tasks?: Array<string>;
+}
+
+const {
+  position,
+  company,
+  place,
+  date,
+  stillWorkingThere = false,
+  tasks = [],
+} = Astro.props;
+---
+
+<div class="border-l-2 rounded-xl p-5">
+  <h2>{position}</h2>
+  <div class="ms-3">
+    <h3>{company}</h3>
+    <div class="flex gap-4 justify-between mt-2">
+      <span class="grow">{place}</span>
+      <span class="my-auto flex-none"
+        >{date} {stillWorkingThere ? " - Presente" : ""}</span
+      >
+    </div>
+    <ul class="list-disc list-inside space-y-4 my-4">
+      {tasks.map((task) => <li>{task}</li>)}
+    </ul>
+  </div>
+</div>
