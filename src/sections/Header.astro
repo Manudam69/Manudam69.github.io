@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import ProfileImage from "../assets/images/foto_perfil.jpg";
+import ContactList from "../components/ContactList.astro";
+
+const contactList = [
+  {
+    src: "/icons/email.svg",
+    alt: "Email Icon",
+    href: "mailto: manueldavid@live.com.mx",
+    children: "manueldavid@live.com.mx",
+  },
+  {
+    src: "/icons/phone.svg",
+    alt: "Phone Icon",
+    href: "tel:+524491998245",
+    children: "+524491998245",
+  },
+  {
+    src: "/icons/linkedin.svg",
+    alt: "LinkedIn Icon",
+    href: "https://www.linkedin.com/in/manuelalonsom/",
+    children: "LinkedIn",
+    target: "_blank",
+  },
+];
+---
+
+<section class="flex flex-wrap tablet:flex-nowrap gap-4 mt-[40px]">
+  <Image
+    src={ProfileImage}
+    alt="Foto de perfil"
+    class={"tablet:w-[25%] tablet:h-full my-auto rounded-sm"}
+  />
+  <div>
+    <h1>Manuel David Alonso Muñoz</h1>
+    <span>Desarrollador Web | Frontend y Backend</span>
+    <p class="mt-5">
+      Soy un apasionado ingeniero en sistemas especializado en el desarrollo web
+      full-stack. Mi experiencia abarca tanto el front-end como el back-end. En
+      el ámbito del front-end, he trabajado con frameworks como React, Angular y
+      JQuery, creando interfaces de usuario atractivas e intuitivas que mejoran
+      la experiencia del usuario.
+    </p>
+
+    <h3 class="my-6">Contacto</h3>
+    <ul class="list-inside space-y-1">
+      {
+        contactList.map((contact) => (
+          <li>
+            <ContactList
+              href={contact.href}
+              alt={contact.alt}
+              src={contact.src}
+              target={contact.target}
+            >
+              {contact.children}
+            </ContactList>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

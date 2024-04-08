@@ -1,19 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import "../styles/global.css";
-import srcImage from "../../public/icons/construction.svg";
+import Header from "../sections/Header.astro";
+import Experience from "../sections/Experience.astro";
+import "../assets/styles/global.css";
 ---
 
 <Layout title="Manuel Alonso">
-  <main class="text-white">
-    <div class="min-h-screen flex flex-col gap-4 justify-center items-center">
-      <img src={srcImage.src} alt="Construction icon" class="w-64" />
-      <h5 class="text-[2rem] tablet:text-[4rem] font-mono text-center">
-        Sitio en construcción
-      </h5>
-    </div>
+  <main class="text-white contenedor">
+    <Header />
+    <Experience />
   </main>
 </Layout>
-
-<style></style>

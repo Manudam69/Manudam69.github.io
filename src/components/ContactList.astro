@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  src: string;
+  alt: string;
+  href: string;
+  target?: string;
+}
+
+const { src, alt, href, target = "_self" } = Astro.props;
+---
+
+<a class="flex gap-3 w-fit" href={href} target={target}>
+  <Image
+    src={src}
+    width={30}
+    height={30}
+    alt={alt}
+    class="bg-[#f1f1f1] p-1 rounded-full"
+  />
+  <span class="my-auto">
+    <slot />
+  </span></a
+>
