@@ -1,0 +1,34 @@
+---
+import Skills from "./Skills.astro";
+
+interface Props {
+  title: string;
+  url: string;
+  href: string;
+  picture_url: string;
+  technologies: Array<string>;
+}
+
+const { title, url, picture_url, href, technologies } = Astro.props;
+---
+
+<div>
+  <h2 class="mb-2">{title}</h2>
+  <a href={href} target="_blank" class="w-fit"><span>{url}</span></a>
+  <a href={href} target="_blank" class="w-fit">
+    <img
+      onclick=""
+      src={picture_url}
+      alt="Imagen de proyecto"
+      class="mt-5 rounded-xl hover:scale-150 transition-all duration-200 border-primary border"
+    />
+  </a>
+  <p class="mt-2 font-mono">Tecnologías utlilizadas:</p>
+  <div class="flex flex-wrap gap-2">
+    {technologies.map((technology) => <Skills>{technology}</Skills>)}
+  </div>
+  <p class="mt-2 font-mono">Descripción:</p>
+  <p class="border-l-2 p-2 text-justify">
+    <slot />
+  </p>
+</div>
