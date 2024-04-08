@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satisfy";
+  src: url("../fonts/Satisfy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+@layer base {
+  html {
+    @apply font-[Ubuntu];
+  }
+  main {
+    @apply contenedor text-["#f1f1f1"]
+  }
+  h1 {
+    @apply font-[Satisfy] text-[32px] laptop:text-[66px] tablet:text-[48px] font-[400] leading-[110%];
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    backface-visibility: hidden;
+  }
+  h2 {
+    @apply font-[Satisfy] font-[400] leading-[110%] text-[24px] laptop:text-[30px];
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    backface-visibility: hidden;
+  }
+  h3 {
+    @apply font-[Satisfy] font-[400] text-[24px] leading-[110%];
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    backface-visibility: hidden;
+  }
+  p,
+  span {
+    @apply laptop:text-[16px] text-[14px] font-[400] leading-[135%];
+  }
+  button {
+    @apply text-[14px] laptop:text-[18px] font-[600] leading-[100%];
+  }
+  a {
+    @apply text-[14px] font-[600] underline underline-offset-[3px] leading-[100%];
+  }
+  nav * {
+    @apply text-[16px] laptop:text-[16px] font-[500] leading-[100%] no-underline;
+  }
+  label {
+    @apply text-[14px] font-[600] leading-[100%];
+  }
+  .contenedor {
+    @apply max-w-[320px] smartphone:max-w-[480px] tablet:max-w-[760px] laptop:max-w-[1200px] desktop:max-w-[1600px] mx-auto;
+  }
+}
