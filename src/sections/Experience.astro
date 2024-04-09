@@ -2,6 +2,10 @@
 import Skills from "../components/Skills.astro";
 import Expirience from "../components/Expirence.astro";
 import Projects from "../components/Projects.astro";
+import { getLangFromUrl, useTranslations } from "i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const skills = [
   "Typescript",
@@ -95,7 +99,7 @@ const projects = [
 
 <section class="grid grid-cols-1 tablet:grid-cols-2 gap-4 my-10">
   <div>
-    <h2>Experiencia</h2>
+    <h2>{t('experience.experience')}</h2>
     <div class="my-5 space-y-4">
       {
         experiences.map((experience) => (
@@ -110,7 +114,7 @@ const projects = [
         ))
       }
     </div>
-    <h2>Educación</h2>
+    <h2>{t('experience.education')}</h2>
     <div class="my-5 space-y-4">
       {
         educations.map((education) => (
