@@ -3,11 +3,13 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@sections/Header.astro";
 import Experience from "@sections/Experience.astro";
 import Footer from "@sections/Footer.astro";
+import LanguagePicker from "@components/LanguagePicker.astro";
 import "@assets/styles/global.css";
 ---
 
 <Layout title="Manuel Alonso">
   <main class="text-white contenedor">
+    <LanguagePicker />
     <Header />
     <Experience />
   </main>

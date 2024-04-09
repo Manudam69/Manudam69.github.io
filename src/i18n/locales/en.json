@@ -1,0 +1,84 @@
+{
+  "EXPERIENCES": [
+    {
+      "position": "Developer",
+      "company": "Gobierno Digital",
+      "place": "Querétaro Arteaga, México",
+      "date": "01/2023",
+      "stillWorkingThere": true,
+      "tasks": [
+        "I contributed to the design and development of new web platforms, as well as the ongoing maintenance of existing ones, serving as a Full Stack Web Developer",
+        "I utilized technologies such as Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle, and Docker to implement robust and efficient solutions.",
+        "I closely collaborated with multidisciplinary teams to translate business requirements into user-friendly and functional features. Specialized in optimizing performance, ensuring scalability, and enhancing the overall user experience."
+      ]
+    },
+    {
+      "position": "Web Developer",
+      "company": "Freelancer",
+      "place": "Remote",
+      "date": "04/2022",
+      "stillWorkingThere": true,
+      "tasks": [
+        "Expanded experience in the comprehensive creation of an access control platform using QR codes. Responsible for the complete design and development, I utilized Svelte for the main interface, Angular for the main application, Node.js as the backend, and PostgreSQL as the database. I was responsible for conceptualizing and structuring the system from inception to successful deployment.",
+        "I adopted Agile methodologies for efficient and adaptable development, implementing advanced security measures and backup strategies to ensure the integrity and availability of data."
+      ]
+    },
+    {
+      "position": "Junior Developer",
+      "company": "Gobierno Digital",
+      "place": "Querétaro Arteaga, México",
+      "date": "03/2021 - 11/2022",
+      "tasks": [
+        "Web Development using both frontend and backend technologies. Specialized in creating new modules and maintaining existing ones using JQuery, JavaScript, PHP, and Oracle.",
+        "Skills in designing and implementing registration pages and forms. Committed to delivering robust and user-friendly solutions.",
+        "Maintenance and creation of registration forms for electoral campaigns."
+      ]
+    }
+  ],
+  "EDUCATIONS": [
+    {
+      "carrer": "Computer Systems Engineering",
+      "school": "Universidad Autónoma de Aguascalientes",
+      "place": "Aguascalientes, México",
+      "date": "2015 - 2020"
+    }
+  ],
+  "SKILLS": [
+    "Typescript",
+    "Javascript",
+    "Angular",
+    "AngularJS",
+    "React",
+    "Svelte",
+    "Astro",
+    "NextJS",
+    "JQuery",
+    "Tailwind",
+    "Boostrap",
+    "NodeJS",
+    "PHP",
+    "Oracle",
+    "Postgres",
+    "MySQL",
+    "Docker"
+  ],
+  "LANGUAJES": ["Spanish", "English"],
+  "PROJECTS": [
+    {
+      "title": "Ezsecure",
+      "url": "ezsecure.com.mx",
+      "href": "https://ezsecure.com.mx",
+      "picture_url": "/src/assets/images/ezsecure.png",
+      "technologies": ["Angular", "Svelte", "NodeJS", "Postgres"],
+      "description": "Ezsecure is a platform that provides comprehensive solutions for access control and security in condominiums. It simplifies management, enhances security, and provides an exceptional experience for residents and visitors."
+    },
+    {
+      "title": "KindHealth",
+      "url": "kindhealth.co",
+      "href": "https://www.kindhealth.co/",
+      "picture_url": "/src/assets/images/kindhealth.png",
+      "technologies": ["NextJS", "Svelte", "Figma", "Postgres"],
+      "description": "KindHealth is a platform that provides a personalized insurance strategy for individuals and families to help protect them against financial risks."
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
 interface Props {
   position: string;
   company: string;
@@ -8,6 +10,9 @@ interface Props {
   tasks?: Array<string>;
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const {
   position,
   company,
@@ -16,6 +21,7 @@ const {
   stillWorkingThere = false,
   tasks = [],
 } = Astro.props;
+
 ---
 
 <div class="border-l-2 rounded-xl p-5">
@@ -25,7 +31,7 @@ const {
     <div class="flex gap-4 justify-between mt-2">
       <span class="grow">{place}</span>
       <span class="my-auto flex-none text-gray-300 text-sm"
-        >{date} {stillWorkingThere ? " - Presente" : ""}</span
+        >{date} {stillWorkingThere ? " - " + t('experience.present') : ""}</span
       >
     </div>
     <ul class="list-disc list-inside space-y-4 my-4">

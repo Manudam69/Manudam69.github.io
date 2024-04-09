@@ -4,6 +4,16 @@ export const languages = {
 };
 
 export const defaultLang = "es";
+export const showDefaultLang = false;
+
+export const routes = {
+  es: {
+    'inicio': 'inicio'
+  },
+  en: {
+    'inicio': 'home'
+  },
+};
 
 export const ui = {
   es: {
@@ -16,7 +26,9 @@ export const ui = {
     "experience.languaje": "Idiomas",
     "experience.projects": "Proyectos",
     "experience.education": "Educación",
-
+    "experience.present": "Presente",
+    "projects.technologies": "Tecnologías utlilizadas",
+    "projects.description": "Descripción"
   },
   en: {
     "header.profession": "Web Developer | Frontend & Backend",
@@ -28,5 +40,8 @@ export const ui = {
     "experience.languaje": "Languages",
     "experience.projects": "Projects",
     "experience.education": "Education",
+    "experience.present": "Present",
+    "projects.technologies": "Technologies Used",
+    "projects.description": "Description"
   },
 } as const;

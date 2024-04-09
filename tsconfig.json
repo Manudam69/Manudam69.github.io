@@ -6,6 +6,8 @@
       "@sections/*": ["sections/*"],
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@i18n/*": ["i18n/*"]
     }
   },
   "exclude": [

@@ -3,103 +3,24 @@ import Skills from "../components/Skills.astro";
 import Expirience from "../components/Expirence.astro";
 import Projects from "../components/Projects.astro";
 import { getLangFromUrl, useTranslations } from "i18n/utils";
+import { getI18N } from "@i18n/index";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const skills = [
-  "Typescript",
-  "Javascript",
-  "Angular",
-  "AngularJS",
-  "React",
-  "Svelte",
-  "Astro",
-  "NextJS",
-  "JQuery",
-  "Tailwind",
-  "Boostrap",
-  "NodeJS",
-  "PHP",
-  "Oracle",
-  "Postgres",
-  "MySQL",
-  "Docker",
-];
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
-const experiences = [
-  {
-    position: "Desarrollador",
-    company: "Gobierno Digital",
-    place: "Querétaro Arteaga, México",
-    date: "01/2023",
-    stillWorkingThere: true,
-    tasks: [
-      "Contribuí al diseño y desarrollo de nuevas plataformas web, así como al mantenimiento continuo de las existentes, desempeñándome como Desarrollador Web Full Stack.",
-      "Utilicé tecnologías como NextJS, Svelte, NodeJS, JavaScript, TypeScript, ORACLE y Docker para implementar soluciones sólidas y eficientes.",
-      "Colaboré estrechamente con equipos multidisciplinarios para traducir los requisitos comerciales en características funcionales y amigables para el usuario. Especializado en optimizar el rendimiento, garantizar la escalabilidad y mejorar la experiencia general del usuario.",
-    ],
-  },
-  {
-    position: "Desarrollador Web",
-    company: "Freelancer",
-    place: "Remoto",
-    date: "04/2022",
-    stillWorkingThere: true,
-    tasks: [
-      "Ampliar experiencia en la creación integral de una plataforma de control de accesos mediante códigos QR. Encargado del diseño y desarrollo completo, utilicé Svelte para la interfaz principal, Angular para la aplicación principal, NodeJS como backend, y PostgreSQL como base de datos. Responsable de concebir y estructurar el sistema desde el principio hasta su despliegue exitoso",
-      "Adopté metodologías ágiles para un desarrollo eficiente y adaptable, implementando medidas de seguridad avanzadas y estrategias de respaldo para asegurar la integridad y disponibilidad de los datos",
-    ],
-  },
-  {
-    position: "Desarrollador Junior",
-    company: "Gobierno Digital",
-    place: "Querétaro Arteaga, México",
-    date: "03/2021 - 11/2022",
-    tasks: [
-      "Desarrollo Web con el uso de tecnologías tanto de frontend como de backend. Especializado en la creación de nuevos módulos y el mantenimiento de los existentes utilizando JQuery, JavaScript, PHP y Oracle",
-      "Habilidades en el diseño e implementación de páginas de registro y formularios. Comprometido con la entrega de soluciones sólidas y amigables para el usuario",
-      "Mantenimiento y creación de formularios de registro para campañas electorales",
-    ],
-  },
-];
-
-const educations = [
-  {
-    carrer: "Ingeniería en Sistemas Computacionales",
-    school: "Universidad Autónoma de Aguascalientes",
-    place: "Aguascalientes, México",
-    date: "2015 - 2020",
-  },
-];
-
-const languajes = ["Español", "Inglés"];
-
-const projects = [
-  {
-    title: "Ezsecure",
-    url: "ezsecure.com.mx",
-    href: "https://ezsecure.com.mx",
-    picture_url: "/src/assets/images/ezsecure.png",
-    technologies: ["Angular", "Svelte", "NodeJS", "Postgres"],
-    description:
-      "Ezsecure es una plataforma que proporciona soluciones integrales para el control de accesos y seguridad en condominios. Simplifica la gestión, mejora la seguridad y brinda una experiencia excepcional a residentes y visitantes.",
-  },
-  {
-    title: "KindHealth",
-    url: "kindhealth.co",
-    href: "https://www.kindhealth.co/",
-    picture_url: "/src/assets/images/kindhealth.png",
-    technologies: ["NextJS", "Svelte", "Figma", "Postgres"],
-    description:
-      "KindHealth es una plataforma que proporciona una estrategia de seguro personalizada para personas y familias para ayudar a protegerlos contra riesgos financieros.",
-  },
-];
+const skills = i18n.SKILLS;
+const experiences = i18n.EXPERIENCES;
+const educations = i18n.EDUCATIONS;
+const languajes = i18n.LANGUAJES;
+const projects = i18n.PROJECTS;
 ---
 
 <section class="grid grid-cols-1 tablet:grid-cols-2 gap-4 my-10">
   <div>
-    <h2>{t('experience.experience')}</h2>
+    <h2>{t("experience.experience")}</h2>
     <div class="my-5 space-y-4">
       {
         experiences.map((experience) => (
@@ -114,7 +35,7 @@ const projects = [
         ))
       }
     </div>
-    <h2>{t('experience.education')}</h2>
+    <h2>{t("experience.education")}</h2>
     <div class="my-5 space-y-4">
       {
         educations.map((education) => (
@@ -129,15 +50,15 @@ const projects = [
     </div>
   </div>
   <div>
-    <h2>Habilidades</h2>
+    <h2>{t("experience.skills")}</h2>
     <div class="flex gap-2 flex-wrap mt-3">
       {skills.map((skill) => <Skills>{skill}</Skills>)}
     </div>
-    <h2 class="mt-5">Idiomas</h2>
+    <h2 class="mt-5">{t("experience.languaje")}</h2>
     <div class="flex gap-2 flex-wrap mt-3">
       {languajes.map((languaje) => <Skills>{languaje}</Skills>)}
     </div>
-    <h2 class="mt-5">Proyectos</h2>
+    <h2 class="mt-5">{t("experience.projects")}</h2>
     <div class="grid grid-cols-1 laptop:grid-cols-2 gap-4 flex-wrap mt-3 ms-1">
       {
         projects.map((project) => (
