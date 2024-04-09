@@ -27,6 +27,13 @@ const contactList = [
     children: "LinkedIn",
     target: "_blank",
   },
+  {
+    src: "/icons/github.png",
+    alt: "Github Icon",
+    href: "https://github.com/Manudam69",
+    children: "Github",
+    target: "_blank",
+  },
 ];
 ---
 
@@ -44,7 +51,7 @@ const contactList = [
     </p>
 
     <h3 class="my-6">{t("header.contacto")}</h3>
-    <ul class="list-inside space-y-1">
+    <ul class="list-inside space-y-2">
       {
         contactList.map((contact) => (
           <li>
