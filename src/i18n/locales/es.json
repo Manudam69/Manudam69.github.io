@@ -69,7 +69,7 @@
       "url": "ezsecure.com.mx",
       "href": "https://ezsecure.com.mx",
       "picture_url": "/src/assets/images/ezsecure.png",
-      "technologies": ["Angular", "Svelte", "NodeJS", "Postgres"],
+      "technologies": ["Angular", "Svelte", "NodeJS", "Postgres", "Typescript"],
       "description": "Ezsecure es una plataforma que proporciona soluciones integrales para el control de accesos y seguridad en condominios. Simplifica la gestión, mejora la seguridad y brinda una experiencia excepcional a residentes y visitantes."
     },
     {
@@ -77,8 +77,25 @@
       "url": "kindhealth.co",
       "href": "https://www.kindhealth.co/",
       "picture_url": "/src/assets/images/kindhealth.png",
-      "technologies": ["NextJS", "Svelte", "Figma", "Postgres"],
+      "technologies": ["NextJS", "Svelte", "Figma", "Postgres", "Typescript"],
       "description": "KindHealth es una plataforma que proporciona una estrategia de seguro personalizada para personas y familias para ayudar a protegerlos contra riesgos financieros."
+    },
+    {
+      "title": "Eleckto",
+      "url": "eleckto.com",
+      "href": "https://eleckto.com/",
+      "picture_url": "/src/assets/images/eleckto.png",
+      "technologies": [
+        "JQuery",
+        "Bootstrap",
+        "PHP",
+        "ORACLE",
+        "NodeJS",
+        "Docker",
+        "Javascript",
+        "React"
+      ],
+      "description": "Creación de herramientas y estrategias para manejar un flujo correcto y efectivo de campañas logrando el éxito y triunfo electoral posicionándonos en la punta de la tecnología y de la confiabilidad de nuestros clientes."
     }
   ]
 }

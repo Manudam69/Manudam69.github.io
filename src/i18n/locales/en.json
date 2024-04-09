@@ -79,6 +79,23 @@
       "picture_url": "/src/assets/images/kindhealth.png",
       "technologies": ["NextJS", "Svelte", "Figma", "Postgres"],
       "description": "KindHealth is a platform that provides a personalized insurance strategy for individuals and families to help protect them against financial risks."
+    },
+    {
+      "title": "Eleckto",
+      "url": "eleckto.com",
+      "href": "https://eleckto.com/",
+      "picture_url": "/src/assets/images/eleckto.png",
+      "technologies": [
+        "JQuery",
+        "Bootstrap",
+        "PHP",
+        "ORACLE",
+        "NodeJS",
+        "Docker",
+        "Javascript",
+        "React"
+      ],
+      "description": "Development of tools and strategies to manage a smooth and effective flow of campaigns, achieving electoral success and triumph by positioning ourselves at the forefront of technology and earning the trust of our clients."
     }
   ]
 }
