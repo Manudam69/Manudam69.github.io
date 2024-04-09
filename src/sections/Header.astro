@@ -2,6 +2,10 @@
 import { Image } from "astro:assets";
 import ProfileImage from "../assets/images/foto_perfil.jpg";
 import ContactList from "../components/ContactList.astro";
+import { getLangFromUrl, useTranslations } from "i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const contactList = [
   {
@@ -26,24 +30,20 @@ const contactList = [
 ];
 ---
 
-<section class="flex flex-wrap tablet:flex-nowrap gap-4 mt-[40px]">
+<section class="flex flex-wrap tablet:flex-nowrap gap-4">
   <Image
     src={ProfileImage}
     alt="Foto de perfil"
-    class={"tablet:w-[25%] tablet:h-full my-auto rounded-full"}
+    class={"tablet:w-[25%] tablet:h-full my-auto rounded-full border-[0.25rem] border-primary shadow-[0_0px_11px_-0px_rgba(0,0,0)]"}
   />
   <div>
     <h1>Manuel David Alonso Muñoz</h1>
-    <span>Desarrollador Web | Frontend y Backend</span>
+    <span>{t("header.profession")}</span>
     <p class="mt-5">
-      Soy un apasionado ingeniero en sistemas especializado en el desarrollo web
-      full-stack. Mi experiencia abarca tanto el front-end como el back-end. En
-      el ámbito del front-end, he trabajado con frameworks como React, Angular y
-      JQuery, creando interfaces de usuario atractivas e intuitivas que mejoran
-      la experiencia del usuario.
+      {t("header.description")}
     </p>
 
-    <h3 class="my-6">Contacto</h3>
+    <h3 class="my-6">{t("header.contacto")}</h3>
     <ul class="list-inside space-y-1">
       {
         contactList.map((contact) => (

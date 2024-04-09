@@ -2,6 +2,10 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import Skills from "./Skills.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/*.{jpeg,jpg,png,gif}"
@@ -32,11 +36,11 @@ interface Props {
       class="mt-5 rounded-xl hover:scale-150 transition-all duration-200 border-primary border"
     />
   </a>
-  <p class="mt-2 font-mono">Tecnologías utlilizadas:</p>
+  <p class="my-2 font-mono">{t('projects.technologies')}:</p>
   <div class="flex flex-wrap gap-2">
     {technologies.map((technology) => <Skills>{technology}</Skills>)}
   </div>
-  <p class="mt-2 font-mono">Descripción:</p>
+  <p class="my-2 font-mono">{t('projects.description')}:</p>
   <p class="border-l-2 p-2 text-justify">
     <slot />
   </p>
