@@ -7,9 +7,9 @@
       "date": "01/2023",
       "stillWorkingThere": true,
       "tasks": [
-        "I contributed to the design and development of new web platforms, as well as the ongoing maintenance of existing ones, serving as a Full Stack Web Developer",
-        "I utilized Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle, and Docker as technologies to implement robust and efficient solutions.",
-        "I closely collaborated with multidisciplinary teams to translate business requirements into user-friendly and functional features. Specialized in optimizing performance, ensuring scalability, and enhancing the overall user experience."
+        "I contributed to designing and developing new web platforms and maintained existing ones in a Full-Stack Web Developer role.",
+        "I utilized Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle, and Docker to deliver robust, efficient solutions.",
+        "I collaborated with multidisciplinary teams to translate business requirements into user-friendly, scalable features, optimizing performance and overall user experience."
       ]
     },
     {
@@ -19,8 +19,8 @@
       "date": "04/2022",
       "stillWorkingThere": true,
       "tasks": [
-        "Expanded experience in the comprehensive creation of an access control platform using QR codes. Responsible for the complete design and development, I utilized Svelte for the main interface, Angular for the main application, Node.js as the backend, and PostgreSQL as the database. I was responsible for conceptualizing and structuring the system from inception to successful deployment.",
-        "I adopted Agile methodologies for efficient and adaptable development, implementing advanced security measures and backup strategies to ensure the integrity and availability of data."
+        "Designed and built an end-to-end QR code-based access control platform. Used Svelte for the interface, Angular for the core application, Node.js for the backend, and PostgreSQL for the database—from concept to successful deployment.",
+        "Adopted Agile methodologies, implementing security measures and backup strategies to ensure data integrity and availability."
       ]
     },
     {
@@ -29,9 +29,9 @@
       "place": "Querétaro Arteaga, México",
       "date": "03/2021 - 11/2022",
       "tasks": [
-        "Web Development using both frontend and backend technologies. Specialized in creating new modules and maintaining existing ones using JQuery, JavaScript, PHP, and Oracle.",
-        "Skills in designing and implementing registration pages and forms. Committed to delivering robust and user-friendly solutions.",
-        "Maintenance and creation of registration forms for electoral campaigns."
+        "Developed web modules (frontend and backend) using jQuery, JavaScript, PHP, and Oracle.",
+        "Skilled in designing and implementing registration pages and forms, delivering robust and user-friendly solutions.",
+        "Maintained and created registration forms for electoral campaigns."
       ]
     }
   ],
@@ -44,21 +44,21 @@
     }
   ],
   "SKILLS": [
-    "Typescript",
-    "Javascript",
+    "TypeScript",
+    "JavaScript",
     "Angular",
     "AngularJS",
     "React",
     "Svelte",
     "Astro",
-    "NextJS",
-    "JQuery",
+    "Next.js",
+    "jQuery",
     "Tailwind",
     "Bootstrap",
-    "NodeJS",
+    "Node.js",
     "PHP",
     "Oracle",
-    "Postgres",
+    "PostgreSQL",
     "MySQL",
     "Docker"
   ],
@@ -69,7 +69,7 @@
       "url": "ezsecure.com.mx",
       "href": "https://ezsecure.com.mx",
       "picture_url": "/src/assets/images/ezsecure.png",
-      "technologies": ["Angular", "Svelte", "NodeJS", "Postgres"],
+      "technologies": ["Angular", "Svelte", "Node.js", "PostgreSQL"],
       "description": "Ezsecure is a platform that provides comprehensive solutions for access control and security in condominiums. It simplifies management, enhances security, and provides an exceptional experience for residents and visitors."
     },
     {
@@ -77,7 +77,7 @@
       "url": "kindhealth.co",
       "href": "https://www.kindhealth.co/",
       "picture_url": "/src/assets/images/kindhealth.png",
-      "technologies": ["NextJS", "Svelte", "Figma", "Postgres"],
+      "technologies": ["Next.js", "Svelte", "Figma", "PostgreSQL"],
       "description": "KindHealth is a platform that provides a personalized insurance strategy for individuals and families to help protect them against financial risks."
     },
     {
@@ -86,16 +86,32 @@
       "href": "https://eleckto.com/",
       "picture_url": "/src/assets/images/eleckto.png",
       "technologies": [
-        "JQuery",
+        "jQuery",
         "Bootstrap",
         "PHP",
-        "ORACLE",
-        "NodeJS",
+        "Oracle",
+        "Node.js",
         "Docker",
-        "Javascript",
+        "JavaScript",
         "React"
       ],
-      "description": "Development of tools and strategies to manage a smooth and effective flow of campaigns, achieving electoral success and triumph by positioning ourselves at the forefront of technology and earning the trust of our clients."
+      "description": "Built tools and strategies to streamline campaign workflows, achieving electoral success by leveraging cutting-edge technology and earning client trust."
+    },
+    {
+      "title": "Cormati",
+      "url": "cormati.com",
+      "href": "https://cormati.com/",
+      "picture_url": "/src/assets/images/cormati.png",
+      "technologies": [
+        "TypeScript",
+        "Go",
+        "Tailwind",
+        "Svelte",
+        "PocketBase",
+        "Docker",
+        "RabbitMQ"
+      ],
+      "description": "Creates virtual agents that replicate top salespeople to serve more customers simultaneously and amplify sales results."
     }
   ]
 }

@@ -7,9 +7,9 @@
       "date": "01/2023",
       "stillWorkingThere": true,
       "tasks": [
-        "Contribuí al diseño y desarrollo de nuevas plataformas web, así como al mantenimiento continuo de las existentes, desempeñándome como Desarrollador Web Full Stack.",
-        "Utilicé tecnologías como NextJS, Svelte, NodeJS, JavaScript, TypeScript, ORACLE y Docker para implementar soluciones sólidas y eficientes.",
-        "Colaboré estrechamente con equipos multidisciplinarios para traducir los requisitos comerciales en características funcionales y amigables para el usuario. Especializado en optimizar el rendimiento, garantizar la escalabilidad y mejorar la experiencia general del usuario."
+        "Contribuí al diseño y desarrollo de nuevas plataformas web y al mantenimiento continuo de las existentes, desempeñándome como Desarrollador Web Full Stack.",
+        "Utilicé tecnologías como Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle y Docker para implementar soluciones sólidas y eficientes.",
+        "Colaboré con equipos multidisciplinarios para traducir requisitos de negocio en funcionalidades usables y escalables, optimizando rendimiento y experiencia de usuario."
       ]
     },
     {
@@ -19,8 +19,8 @@
       "date": "04/2022",
       "stillWorkingThere": true,
       "tasks": [
-        "Ampliar experiencia en la creación integral de una plataforma de control de accesos mediante códigos QR. Encargado del diseño y desarrollo completo, utilicé Svelte para la interfaz principal, Angular para la aplicación principal, NodeJS como backend, y PostgreSQL como base de datos. Responsable de concebir y estructurar el sistema desde el principio hasta su despliegue exitoso",
-        "Adopté metodologías ágiles para un desarrollo eficiente y adaptable, implementando medidas de seguridad avanzadas y estrategias de respaldo para asegurar la integridad y disponibilidad de los datos"
+        "Diseñé y desarrollé integralmente una plataforma de control de accesos mediante códigos QR. Usé Svelte para la interfaz, Angular para la aplicación principal, Node.js como backend y PostgreSQL como base de datos; responsable desde la concepción hasta el despliegue.",
+        "Apliqué metodologías ágiles e implementé medidas de seguridad y estrategias de respaldo para asegurar integridad y disponibilidad de los datos."
       ]
     },
     {
@@ -29,9 +29,9 @@
       "place": "Querétaro Arteaga, México",
       "date": "03/2021 - 11/2022",
       "tasks": [
-        "Desarrollo Web con el uso de tecnologías tanto de frontend como de backend. Especializado en la creación de nuevos módulos y el mantenimiento de los existentes utilizando JQuery, JavaScript, PHP y Oracle",
-        "Habilidades en el diseño e implementación de páginas de registro y formularios. Comprometido con la entrega de soluciones sólidas y amigables para el usuario",
-        "Mantenimiento y creación de formularios de registro para campañas electorales"
+        "Desarrollo web full stack creando y manteniendo módulos con jQuery, JavaScript, PHP y Oracle.",
+        "Diseño e implementación de páginas y formularios de registro orientados a usabilidad y robustez.",
+        "Creación y mantenimiento de formularios de registro para campañas electorales."
       ]
     }
   ],
@@ -44,21 +44,21 @@
     }
   ],
   "SKILLS": [
-    "Typescript",
-    "Javascript",
+    "TypeScript",
+    "JavaScript",
     "Angular",
     "AngularJS",
     "React",
     "Svelte",
     "Astro",
-    "NextJS",
-    "JQuery",
+    "Next.js",
+    "jQuery",
     "Tailwind",
     "Bootstrap",
-    "NodeJS",
+    "Node.js",
     "PHP",
     "Oracle",
-    "Postgres",
+    "PostgreSQL",
     "MySQL",
     "Docker"
   ],
@@ -69,7 +69,13 @@
       "url": "ezsecure.com.mx",
       "href": "https://ezsecure.com.mx",
       "picture_url": "/src/assets/images/ezsecure.png",
-      "technologies": ["Angular", "Svelte", "NodeJS", "Postgres", "Typescript"],
+      "technologies": [
+        "Angular",
+        "Svelte",
+        "Node.js",
+        "PostgreSQL",
+        "TypeScript"
+      ],
       "description": "Ezsecure es una plataforma que proporciona soluciones integrales para el control de accesos y seguridad en condominios. Simplifica la gestión, mejora la seguridad y brinda una experiencia excepcional a residentes y visitantes."
     },
     {
@@ -77,7 +83,13 @@
       "url": "kindhealth.co",
       "href": "https://www.kindhealth.co/",
       "picture_url": "/src/assets/images/kindhealth.png",
-      "technologies": ["NextJS", "Svelte", "Figma", "Postgres", "Typescript"],
+      "technologies": [
+        "Next.js",
+        "Svelte",
+        "Figma",
+        "PostgreSQL",
+        "TypeScript"
+      ],
       "description": "KindHealth es una plataforma que proporciona una estrategia de seguro personalizada para personas y familias para ayudar a protegerlos contra riesgos financieros."
     },
     {
@@ -86,16 +98,32 @@
       "href": "https://eleckto.com/",
       "picture_url": "/src/assets/images/eleckto.png",
       "technologies": [
-        "JQuery",
+        "jQuery",
         "Bootstrap",
         "PHP",
-        "ORACLE",
-        "NodeJS",
+        "Oracle",
+        "Node.js",
         "Docker",
-        "Javascript",
+        "JavaScript",
         "React"
       ],
-      "description": "Creación de herramientas y estrategias para manejar un flujo correcto y efectivo de campañas logrando el éxito y triunfo electoral posicionándonos en la punta de la tecnología y de la confiabilidad de nuestros clientes."
+      "description": "Desarrollo de herramientas y estrategias para optimizar el flujo de campañas, logrando resultados electorales exitosos mediante el uso de tecnología y ganando la confianza de los clientes."
+    },
+    {
+      "title": "Cormati",
+      "url": "cormati.com",
+      "href": "https://cormati.com/",
+      "picture_url": "/src/assets/images/cormati.png",
+      "technologies": [
+        "TypeScript",
+        "Go",
+        "Tailwind",
+        "Svelte",
+        "PocketBase",
+        "Docker",
+        "RabbitMQ"
+      ],
+      "description": "Crea agentes virtuales que replican a tus mejores vendedores para atender a más clientes simultáneamente y amplificar los resultados de ventas."
     }
   ]
 }
