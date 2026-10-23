@@ -1,26 +1,26 @@
 {
   "EXPERIENCES": [
     {
-      "position": "Desarrollador",
+      "position": "Desarrollador Web Full Stack",
       "company": "Gobierno Digital",
       "place": "Querétaro Arteaga, México",
       "date": "01/2023",
       "stillWorkingThere": true,
       "tasks": [
-        "Contribuí al diseño y desarrollo de nuevas plataformas web y al mantenimiento continuo de las existentes, desempeñándome como Desarrollador Web Full Stack.",
-        "Utilicé tecnologías como Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle y Docker para implementar soluciones sólidas y eficientes.",
-        "Colaboré con equipos multidisciplinarios para traducir requisitos de negocio en funcionalidades usables y escalables, optimizando rendimiento y experiencia de usuario."
+        "Diseño y desarrollo plataformas web a la medida, además de dar mantenimiento evolutivo a los sistemas existentes.",
+        "Implemento soluciones robustas y eficientes con Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle y Docker.",
+        "Colaboro con equipos multidisciplinarios para traducir requisitos de negocio en funcionalidades escalables, optimizando el rendimiento y la experiencia de usuario."
       ]
     },
     {
-      "position": "Desarrollador Web",
+      "position": "Desarrollador Web Full Stack",
       "company": "Freelancer",
       "place": "Remoto",
       "date": "04/2022",
       "stillWorkingThere": true,
       "tasks": [
-        "Diseñé y desarrollé integralmente una plataforma de control de accesos mediante códigos QR. Usé Svelte para la interfaz, Angular para la aplicación principal, Node.js como backend y PostgreSQL como base de datos; responsable desde la concepción hasta el despliegue.",
-        "Apliqué metodologías ágiles e implementé medidas de seguridad y estrategias de respaldo para asegurar integridad y disponibilidad de los datos."
+        "Diseño y desarrollo de forma integral una plataforma de control de accesos mediante códigos QR, con Svelte y Angular en el frontend, Node.js en el backend y PostgreSQL como base de datos, desde la concepción hasta el despliegue en producción.",
+        "Aplico metodologías ágiles e implemento medidas de seguridad y estrategias de respaldo que garantizan la integridad y disponibilidad de los datos."
       ]
     },
     {
@@ -29,9 +29,9 @@
       "place": "Querétaro Arteaga, México",
       "date": "03/2021 - 11/2022",
       "tasks": [
-        "Desarrollo web full stack creando y manteniendo módulos con jQuery, JavaScript, PHP y Oracle.",
-        "Diseño e implementación de páginas y formularios de registro orientados a usabilidad y robustez.",
-        "Creación y mantenimiento de formularios de registro para campañas electorales."
+        "Desarrollé y di mantenimiento a módulos web full stack con jQuery, JavaScript, PHP y Oracle.",
+        "Diseñé e implementé páginas y formularios de registro orientados a la usabilidad y robustez del sistema.",
+        "Creé y mantuve formularios de registro para campañas electorales."
       ]
     }
   ],
@@ -91,7 +91,7 @@
         "Docker",
         "RabbitMQ"
       ],
-      "description": "Crea agentes virtuales que replican a tus mejores vendedores para atender a más clientes simultáneamente y amplificar los resultados de ventas."
+      "description": "Plataforma que crea agentes virtuales capaces de replicar a tus mejores vendedores, permitiendo atender a más clientes de forma simultánea y potenciar los resultados comerciales."
     },
     {
       "title": "Ezsecure",
@@ -105,7 +105,7 @@
         "PostgreSQL",
         "TypeScript"
       ],
-      "description": "Ezsecure es una plataforma que proporciona soluciones integrales para el control de accesos y seguridad en condominios. Simplifica la gestión, mejora la seguridad y brinda una experiencia excepcional a residentes y visitantes."
+      "description": "Plataforma integral para el control de accesos y la seguridad en condominios, que simplifica la gestión administrativa y ofrece una experiencia segura y fluida a residentes y visitantes."
     },
     {
       "title": "KindHealth",
@@ -119,7 +119,7 @@
         "PostgreSQL",
         "TypeScript"
       ],
-      "description": "KindHealth es una plataforma que proporciona una estrategia de seguro personalizada para personas y familias para ayudar a protegerlos contra riesgos financieros."
+      "description": "Plataforma que diseña estrategias de seguro personalizadas para personas y familias, ayudándolas a protegerse frente a riesgos financieros."
     },
     {
       "title": "Eleckto",
@@ -136,7 +136,7 @@
         "JavaScript",
         "React"
       ],
-      "description": "Desarrollo de herramientas y estrategias para optimizar el flujo de campañas, logrando resultados electorales exitosos mediante el uso de tecnología y ganando la confianza de los clientes."
+      "description": "Desarrollo de herramientas y estrategias tecnológicas para optimizar la gestión de campañas electorales, contribuyendo a resultados exitosos y a la confianza de los clientes."
     }
   ]
 }

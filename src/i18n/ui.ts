@@ -38,7 +38,7 @@ export const ui = {
     "hero.quickContact": "Contacto directo",
     "header.profession": "Desarrollador Web | Frontend y Backend",
     "header.description":
-      "Desarrollador auto-motivado con más de 4 años de experiencia colaborando y trabajando en múltiples proyectos basados en la web. Programador apasionado y trabajador, con inclinación por desarrollar interfaces personalizadas que consideren demandas únicas de accesibilidad, alcance y seguridad. Enfocado en la organización para cumplir con múltiples plazos concurrentes. Aplica un conocimiento activo del panorama tecnológico actual para fomentar las mejores prácticas en el diseño web.",
+      "Desarrollador Full Stack con más de 4 años de experiencia diseñando y construyendo productos web para los sectores público y privado. Combino conocimientos sólidos de frontend y backend para crear interfaces accesibles, seguras y escalables, con especial atención al detalle y a la experiencia de usuario. Organizado y orientado a resultados, me adapto con rapidez a nuevas tecnologías y metodologías ágiles de trabajo.",
     "header.contacto": "Información de contacto",
     "experience.experience": "Experiencia",
     "experience.skills": "Habilidades",
@@ -82,7 +82,7 @@ export const ui = {
     "hero.quickContact": "Direct contact",
     "header.profession": "Web Developer | Frontend & Backend",
     "header.description":
-      "Self-motivated Developer adds high level of experience over more than 4 years collaborating and working on multiple web-based projects. Passionate, hardworking coder with penchant for developing customized interfaces that factor in unique demands for accessibility, reachability and security. Organized approach to meeting multiple, concurrent deadlines. Pulls from active knowledge of current technology landscape to promote best practices in web design.",
+      "Full Stack Developer with 4+ years of experience designing and building web products for both public and private sector clients. I combine strong frontend and backend skills to create accessible, secure, and scalable interfaces, with close attention to detail and user experience. Organized and results-driven, I adapt quickly to new technologies and Agile working methodologies.",
     "header.contacto": "Contact information",
     "experience.experience": "Experience",
     "experience.skills": "Skills",

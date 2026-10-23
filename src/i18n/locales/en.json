@@ -1,26 +1,26 @@
 {
   "EXPERIENCES": [
     {
-      "position": "Developer",
+      "position": "Full Stack Web Developer",
       "company": "Gobierno Digital",
       "place": "Querétaro Arteaga, México",
       "date": "01/2023",
       "stillWorkingThere": true,
       "tasks": [
-        "I contributed to designing and developing new web platforms and maintained existing ones in a Full-Stack Web Developer role.",
-        "I utilized Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle, and Docker to deliver robust, efficient solutions.",
-        "I collaborated with multidisciplinary teams to translate business requirements into user-friendly, scalable features, optimizing performance and overall user experience."
+        "Design and develop tailored web platforms, while providing ongoing maintenance for existing systems.",
+        "Deliver robust, efficient solutions using Next.js, Svelte, Node.js, JavaScript, TypeScript, Oracle, and Docker.",
+        "Collaborate with multidisciplinary teams to translate business requirements into scalable features, optimizing performance and overall user experience."
       ]
     },
     {
-      "position": "Web Developer",
+      "position": "Full Stack Web Developer",
       "company": "Freelancer",
       "place": "Remote",
       "date": "04/2022",
       "stillWorkingThere": true,
       "tasks": [
-        "Designed and built an end-to-end QR code-based access control platform. Used Svelte for the interface, Angular for the core application, Node.js for the backend, and PostgreSQL for the database—from concept to successful deployment.",
-        "Adopted Agile methodologies, implementing security measures and backup strategies to ensure data integrity and availability."
+        "Design and build an end-to-end QR code-based access control platform, using Svelte and Angular on the frontend, Node.js on the backend, and PostgreSQL as the database, from concept through production deployment.",
+        "Apply Agile methodologies and implement security measures and backup strategies that ensure data integrity and availability."
       ]
     },
     {
@@ -29,9 +29,9 @@
       "place": "Querétaro Arteaga, México",
       "date": "03/2021 - 11/2022",
       "tasks": [
-        "Developed web modules (frontend and backend) using jQuery, JavaScript, PHP, and Oracle.",
-        "Skilled in designing and implementing registration pages and forms, delivering robust and user-friendly solutions.",
-        "Maintained and created registration forms for electoral campaigns."
+        "Developed and maintained full-stack web modules using jQuery, JavaScript, PHP, and Oracle.",
+        "Designed and implemented registration pages and forms focused on usability and system reliability.",
+        "Created and maintained registration forms for electoral campaigns."
       ]
     }
   ],
@@ -91,7 +91,7 @@
         "Docker",
         "RabbitMQ"
       ],
-      "description": "Creates virtual agents that replicate top salespeople to serve more customers simultaneously and amplify sales results."
+      "description": "A platform that creates virtual agents capable of replicating top salespeople, enabling businesses to serve more customers simultaneously and boost sales results."
     },
     {
       "title": "Ezsecure",
@@ -99,7 +99,7 @@
       "href": "https://ezsecure.cloud",
       "picture_url": "/src/assets/images/ezsecure.png",
       "technologies": ["Angular", "Svelte", "Node.js", "PostgreSQL"],
-      "description": "Ezsecure is a platform that provides comprehensive solutions for access control and security in condominiums. It simplifies management, enhances security, and provides an exceptional experience for residents and visitors."
+      "description": "A comprehensive platform for access control and security in condominiums, simplifying administrative management and delivering a secure, seamless experience for residents and visitors."
     },
     {
       "title": "KindHealth",
@@ -107,7 +107,7 @@
       "href": "https://www.kindhealth.co/",
       "picture_url": "/src/assets/images/kindhealth.png",
       "technologies": ["Next.js", "Svelte", "Figma", "PostgreSQL"],
-      "description": "KindHealth is a platform that provides a personalized insurance strategy for individuals and families to help protect them against financial risks."
+      "description": "A platform that designs personalized insurance strategies for individuals and families, helping them protect against financial risks."
     },
     {
       "title": "Eleckto",
@@ -124,7 +124,7 @@
         "JavaScript",
         "React"
       ],
-      "description": "Built tools and strategies to streamline campaign workflows, achieving electoral success by leveraging cutting-edge technology and earning client trust."
+      "description": "Development of tools and technology-driven strategies to optimize electoral campaign management, contributing to successful outcomes and client trust."
     }
   ]
 }
