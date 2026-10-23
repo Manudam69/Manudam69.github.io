@@ -1,0 +1,199 @@
+---
+import LanguagePicker from "@components/LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const links = [
+  { href: "#experience", label: t("nav.experience") },
+  { href: "#projects", label: t("nav.projects") },
+  { href: "#skills", label: t("nav.skills") },
+  { href: "#education", label: t("nav.education") },
+];
+---
+
+<header id="site-nav" class="sticky top-0 z-50 w-full">
+  <nav aria-label={t("nav.home")}>
+    <div class="contenedor flex items-center justify-between gap-4 py-4">
+      <a
+        href="#home"
+        class="flex items-center gap-2 no-underline"
+        aria-label={t("nav.home")}
+      >
+        <span
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-[13px] font-bold text-white"
+          aria-hidden="true">MA</span
+        >
+        <span
+          class="hidden text-[15px] font-semibold text-ink smartphone:inline"
+          >{t("nav.brand")}</span
+        >
+      </a>
+
+      <ul
+        class="m-0 hidden list-none items-center gap-7 p-0 tablet:flex"
+        role="list"
+      >
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href} class="nav-link" data-nav-link>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden tablet:block">
+          <LanguagePicker />
+        </div>
+        <a href="#contact" class="btn-primary hidden tablet:inline-flex"
+          >{t("nav.contactCta")}</a
+        >
+        <button
+          id="nav-toggle"
+          type="button"
+          class="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-line/25 bg-surface-2 text-ink tablet:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label={t("nav.openMenu")}
+        >
+          <svg
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <line
+              x1="4"
+              y1="7"
+              x2="20"
+              y2="7"
+              class="origin-center transition-transform duration-200 group-aria-expanded:translate-y-[5px] group-aria-expanded:rotate-45"
+            ></line>
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              class="transition-opacity duration-200 group-aria-expanded:opacity-0"
+            ></line>
+            <line
+              x1="4"
+              y1="17"
+              x2="20"
+              y2="17"
+              class="origin-center transition-transform duration-200 group-aria-expanded:-translate-y-[5px] group-aria-expanded:-rotate-45"
+            ></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-line/15 bg-canvas px-4 pb-6 pt-2 tablet:hidden"
+    >
+    <ul class="m-0 flex list-none flex-col gap-1 p-0" role="list">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="nav-link block rounded-lg px-2 py-3"
+              data-nav-link
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mt-3 flex items-center justify-between gap-3">
+      <LanguagePicker />
+      <a href="#contact" class="btn-primary">{t("nav.contactCta")}</a>
+    </div>
+  </div>
+  </nav>
+</header>
+
+<style>
+  #site-nav {
+    background-color: rgb(23 23 33 / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color 0.3s var(--ease-out),
+      border-color 0.3s var(--ease-out);
+  }
+  #site-nav.nav-scrolled {
+    background-color: rgb(23 23 33 / 0.92);
+    border-bottom-color: rgb(112 112 125 / 0.15);
+  }
+  .nav-link[aria-current="true"] {
+    color: var(--color-text);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #site-nav {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const header = document.getElementById("site-nav");
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  const closeMenu = () => {
+    toggle?.setAttribute("aria-expanded", "false");
+    menu?.classList.add("hidden");
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    menu?.classList.toggle("hidden", isOpen);
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  const updateScrolled = () => {
+    header?.classList.toggle("nav-scrolled", window.scrollY > 8);
+  };
+  updateScrolled();
+  window.addEventListener("scroll", updateScrolled, { passive: true });
+
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+  const sections = document.querySelectorAll("main section[id]");
+
+  if ("IntersectionObserver" in window && sections.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => link.removeAttribute("aria-current"));
+          document
+            .querySelectorAll(`[data-nav-link][href="#${id}"]`)
+            .forEach((link) => link.setAttribute("aria-current", "true"));
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach((section) => observer.observe(section));
+  }
+</script>

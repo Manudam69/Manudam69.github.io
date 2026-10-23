@@ -1,0 +1,46 @@
+---
+import ContactList from "@components/ContactList.astro";
+import { getContactList } from "@data/contact";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const contactList = getContactList(t);
+const emailContact = contactList[0];
+---
+
+<section
+  id="contact"
+  class="section section-pad"
+  aria-labelledby="contact-heading"
+>
+  <div
+    class="card flex flex-col items-start gap-8 tablet:flex-row tablet:items-center tablet:justify-between"
+  >
+    <div class="max-w-[520px]">
+      <h2 id="contact-heading">{t("contact.heading")}</h2>
+      <p class="mt-4 text-muted">{t("contact.description")}</p>
+      <div class="mt-6">
+        <a href={emailContact.href} class="btn-primary"
+          >{t("contact.sendEmail")}</a
+        >
+      </div>
+    </div>
+    <ul class="m-0 flex list-none flex-col gap-4 p-0">
+      {
+        contactList.map((contact) => (
+          <li>
+            <ContactList
+              src={contact.src}
+              alt={contact.alt}
+              href={contact.href}
+              target={contact.target}
+            >
+              {contact.children}
+            </ContactList>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

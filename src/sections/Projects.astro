@@ -1,0 +1,32 @@
+---
+import ProjectCard from "@components/Projects.astro";
+import { getI18N } from "@i18n/index";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const projects = i18n.PROJECTS;
+---
+
+<section id="projects" class="section section-pad" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">{t("experience.projects")}</h2>
+  <div class="mt-10 grid grid-cols-1 gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
+    {
+      projects.map((project, index) => (
+        <ProjectCard
+          title={project.title}
+          href={project.href}
+          url={project.url}
+          picture_url={project.picture_url}
+          technologies={project.technologies}
+          featured={index === 0}
+        >
+          {project.description}
+        </ProjectCard>
+      ))
+    }
+  </div>
+</section>

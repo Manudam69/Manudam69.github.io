@@ -43,31 +43,60 @@
       "date": "2015 - 2020"
     }
   ],
-  "SKILLS": [
-    "TypeScript",
-    "JavaScript",
-    "Angular",
-    "AngularJS",
-    "React",
-    "Svelte",
-    "Astro",
-    "Next.js",
-    "jQuery",
-    "Tailwind",
-    "Bootstrap",
-    "Node.js",
-    "PHP",
-    "Oracle",
-    "PostgreSQL",
-    "MySQL",
-    "Docker"
+  "SKILL_GROUPS": [
+    {
+      "category": "Lenguajes",
+      "skills": ["TypeScript", "JavaScript"]
+    },
+    {
+      "category": "Frontend",
+      "skills": [
+        "Angular",
+        "AngularJS",
+        "React",
+        "Svelte",
+        "Astro",
+        "Next.js",
+        "jQuery",
+        "Tailwind",
+        "Bootstrap"
+      ]
+    },
+    {
+      "category": "Backend",
+      "skills": ["Node.js", "PHP"]
+    },
+    {
+      "category": "Bases de datos",
+      "skills": ["Oracle", "PostgreSQL", "MySQL"]
+    },
+    {
+      "category": "Infraestructura y herramientas",
+      "skills": ["Docker"]
+    }
   ],
   "LANGUAJES": ["Español", "Inglés"],
   "PROJECTS": [
     {
+      "title": "Cormati",
+      "url": "cormati.com",
+      "href": "https://cormati.com/",
+      "picture_url": "/src/assets/images/cormati.png",
+      "technologies": [
+        "TypeScript",
+        "Go",
+        "Tailwind",
+        "Svelte",
+        "PocketBase",
+        "Docker",
+        "RabbitMQ"
+      ],
+      "description": "Crea agentes virtuales que replican a tus mejores vendedores para atender a más clientes simultáneamente y amplificar los resultados de ventas."
+    },
+    {
       "title": "Ezsecure",
-      "url": "ezsecure.com.mx",
-      "href": "https://ezsecure.com.mx",
+      "url": "ezsecure.cloud",
+      "href": "https://ezsecure.cloud",
       "picture_url": "/src/assets/images/ezsecure.png",
       "technologies": [
         "Angular",
@@ -108,22 +137,6 @@
         "React"
       ],
       "description": "Desarrollo de herramientas y estrategias para optimizar el flujo de campañas, logrando resultados electorales exitosos mediante el uso de tecnología y ganando la confianza de los clientes."
-    },
-    {
-      "title": "Cormati",
-      "url": "cormati.com",
-      "href": "https://cormati.com/",
-      "picture_url": "/src/assets/images/cormati.png",
-      "technologies": [
-        "TypeScript",
-        "Go",
-        "Tailwind",
-        "Svelte",
-        "PocketBase",
-        "Docker",
-        "RabbitMQ"
-      ],
-      "description": "Crea agentes virtuales que replican a tus mejores vendedores para atender a más clientes simultáneamente y amplificar los resultados de ventas."
     }
   ]
 }

@@ -7,7 +7,8 @@
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
-      "@i18n/*": ["i18n/*"]
+      "@i18n/*": ["i18n/*"],
+      "@data/*": ["data/*"]
     }
   },
   "exclude": [

@@ -5,55 +5,148 @@
 @font-face {
   font-family: "Satisfy";
   src: url("../fonts/Satisfy-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu-Regular.ttf");
+  font-display: swap;
+}
+
+/* Design tokens — Mercury-inspired dark system */
+:root {
+  --color-bg: 23 23 33;
+  --color-surface: 30 30 42;
+  --color-surface-2: 39 39 53;
+  --color-text: 237 237 243;
+  --color-text-secondary: 195 195 204;
+  --color-border: 112 112 125;
+  --color-border-light: 226 227 237;
+  --color-accent: 82 102 235;
+  --color-accent-hover: 102 119 242;
+  --color-accent-muted: rgb(82 102 235 / 0.14);
+
+  --container-max: 1200px;
+  --space-section: clamp(4rem, 3rem + 4vw, 5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   html {
-    @apply font-[Ubuntu];
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-canvas text-ink;
   }
   main {
-    @apply contenedor text-["#f1f1f1"]
+    @apply contenedor text-ink;
   }
   h1 {
-    @apply font-[Satisfy] text-[32px] laptop:text-[66px] tablet:text-[48px] font-[400] leading-[110%];
+    @apply font-sans font-medium leading-[110%] tracking-tight;
+    font-size: clamp(2.25rem, 1.6rem + 3.2vw, 4rem);
     text-rendering: optimizeLegibility;
     font-smoothing: antialiased;
     backface-visibility: hidden;
   }
   h2 {
-    @apply font-[Satisfy] font-[400] leading-[110%] text-[24px] laptop:text-[30px];
+    @apply font-sans font-medium leading-[115%] tracking-tight;
+    font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.625rem);
     text-rendering: optimizeLegibility;
     font-smoothing: antialiased;
     backface-visibility: hidden;
   }
   h3 {
-    @apply font-[Satisfy] font-[400] text-[24px] leading-[110%];
+    @apply font-sans font-medium leading-[120%];
+    font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
     text-rendering: optimizeLegibility;
     font-smoothing: antialiased;
     backface-visibility: hidden;
   }
   p,
   span {
-    @apply laptop:text-[16px] text-[14px] font-[400] leading-[135%];
+    @apply laptop:text-[16px] text-[14px] font-normal leading-[150%] text-muted;
   }
   button {
-    @apply text-[14px] laptop:text-[18px] font-[600] leading-[100%];
+    @apply text-[14px] laptop:text-[16px] font-semibold leading-[100%];
   }
   a {
-    @apply text-[14px] font-[600] underline underline-offset-[3px] leading-[100%];
+    @apply font-semibold leading-[100%] no-underline decoration-2 underline-offset-[3px] transition-colors duration-200;
   }
   nav * {
-    @apply text-[16px] laptop:text-[16px] font-[500] leading-[100%] no-underline;
+    @apply text-[15px] laptop:text-[15px] font-medium leading-[100%] no-underline;
   }
   label {
-    @apply text-[14px] font-[600] leading-[100%];
+    @apply text-[14px] font-semibold leading-[100%];
   }
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-canvas rounded-sm;
+  }
+  ::selection {
+    background: var(--color-accent-muted);
+    color: var(--color-text);
+  }
+
   .contenedor {
-    @apply max-w-[320px] smartphone:max-w-[480px] tablet:max-w-[760px] laptop:max-w-[1200px] desktop:max-w-[1600px] mx-auto px-4;
+    @apply max-w-[320px] smartphone:max-w-[480px] tablet:max-w-[760px] laptop:max-w-content mx-auto px-4;
+  }
+}
+
+@layer components {
+  .section {
+    scroll-margin-top: 5.5rem;
+  }
+  .section-pad {
+    padding-block: var(--space-section);
+  }
+  .eyebrow {
+    @apply font-script text-accent text-[20px] laptop:text-[24px] leading-none;
+  }
+  .section-label {
+    @apply inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-muted;
+  }
+  .card {
+    @apply rounded-card border border-line/15 bg-surface p-6 tablet:p-8 transition-colors duration-300;
+  }
+  .card-hover {
+    @apply hover:border-accent/40 hover:bg-surface-2;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-full border border-line/25 bg-surface-2 px-3 py-1 text-[12px] font-medium leading-none text-muted no-underline;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[14px] font-semibold leading-none no-underline transition-all duration-200 ease-out focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-hover active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn border border-line/30 bg-transparent text-ink hover:border-line/60 hover:bg-surface active:scale-[0.98];
+  }
+  .icon-link {
+    @apply flex h-10 w-10 items-center justify-center rounded-full border border-line/25 bg-surface-2 text-ink no-underline transition-all duration-200 hover:border-accent/50 hover:text-accent active:scale-95;
+  }
+  .nav-link {
+    @apply relative text-ink/80 no-underline transition-colors duration-200 hover:text-ink;
+  }
+  .nav-link[aria-current="true"] {
+    @apply text-ink;
+  }
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-accent px-5 py-3 text-white no-underline transition-transform duration-200 focus:translate-y-0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }

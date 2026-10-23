@@ -1,0 +1,48 @@
+---
+import SkillTag from "@components/Skills.astro";
+import { getI18N } from "@i18n/index";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const educations = i18n.EDUCATIONS;
+const languages = i18n.LANGUAJES;
+---
+
+<section
+  id="education"
+  class="section section-pad"
+  aria-labelledby="education-heading"
+>
+  <h2 id="education-heading">{t("education.heading")}</h2>
+  <div class="mt-10 grid grid-cols-1 gap-6 tablet:grid-cols-2">
+    <div class="card">
+      <h3>{t("experience.education")}</h3>
+      <div class="mt-5 space-y-5">
+        {
+          educations.map((education) => (
+            <div>
+              <p class="font-semibold text-ink">{education.carrer}</p>
+              <p class="mt-0.5 text-[14px] font-semibold text-accent">
+                {education.school}
+              </p>
+              <div class="mt-1 flex flex-wrap justify-between gap-2 text-[13px] text-muted">
+                <span>{education.place}</span>
+                <span>{education.date}</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="card">
+      <h3>{t("experience.languaje")}</h3>
+      <div class="mt-5 flex flex-wrap gap-2">
+        {languages.map((language) => <SkillTag>{language}</SkillTag>)}
+      </div>
+    </div>
+  </div>
+</section>

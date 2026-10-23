@@ -1,17 +1,32 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@sections/Header.astro";
+import Nav from "@sections/Nav.astro";
+import Hero from "@sections/Hero.astro";
 import Experience from "@sections/Experience.astro";
+import Projects from "@sections/Projects.astro";
+import Skills from "@sections/Skills.astro";
+import EducationLanguages from "@sections/EducationLanguages.astro";
+import Contact from "@sections/Contact.astro";
 import Footer from "@sections/Footer.astro";
-import LanguagePicker from "@components/LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import "@assets/styles/global.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const title = `Manuel Alonso — ${t("hero.role")}`;
 ---
 
-<Layout title="Manuel Alonso">
-  <LanguagePicker />
-  <main class="text-white contenedor">
-    <Header />
+<Layout title={title}>
+  <a href="#main-content" class="skip-link">{t("a11y.skipToContent")}</a>
+  <Nav />
+  <main id="main-content">
+    <Hero />
     <Experience />
+    <Projects />
+    <Skills />
+    <EducationLanguages />
+    <Contact />
   </main>
   <Footer />
 </Layout>
+

@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
 interface Props {
   position: string;
@@ -21,21 +21,42 @@ const {
   stillWorkingThere = false,
   tasks = [],
 } = Astro.props;
-
 ---
 
-<div class="border-l-2 rounded-xl p-5">
-  <h2>{position}</h2>
-  <div class="ms-3">
-    <h3>{company}</h3>
-    <div class="flex gap-4 justify-between mt-2">
-      <span class="grow">{place}</span>
-      <span class="my-auto flex-none text-gray-300 text-sm"
-        >{date} {stillWorkingThere ? " - " + t('experience.present') : ""}</span
-      >
+<div class="relative pl-8 tablet:pl-10">
+  <span
+    class="absolute left-0 top-2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-accent"
+    aria-hidden="true"
+  >
+  </span>
+  <span
+    class="absolute left-0 top-2 h-full w-px -translate-x-1/2 bg-line/20"
+    aria-hidden="true"
+  >
+  </span>
+  <div class="pb-10">
+    <div class="flex flex-wrap items-baseline justify-between gap-2">
+      <h3 class="text-ink">{position}</h3>
+      <span class="shrink-0 text-[13px] font-medium text-muted">
+        {date}{stillWorkingThere ? ` — ${t("experience.present")}` : ""}
+      </span>
     </div>
-    <ul class="list-disc list-inside space-y-4 my-4">
-      {tasks.map((task) => <li>{task}</li>)}
-    </ul>
+    <p class="mt-1 text-[15px] font-semibold text-accent">
+      {company}
+    </p>
+    {place && <p class="mt-0.5 text-[13px] text-muted">{place}</p>}
+    {
+      tasks.length > 0 && (
+        <ul class="mt-4 space-y-2.5">
+          {tasks.map((task) => (
+            <li class="flex gap-2.5 text-[14px] leading-[150%] text-muted">
+              <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-line" aria-hidden="true" />
+              <span>{task}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 </div>
+

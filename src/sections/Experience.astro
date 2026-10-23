@@ -1,8 +1,6 @@
 ---
-import Skills from "../components/Skills.astro";
-import Expirience from "../components/Expirence.astro";
-import Projects from "../components/Projects.astro";
-import { getLangFromUrl, useTranslations } from "i18n/utils";
+import Expirence from "@components/Expirence.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { getI18N } from "@i18n/index";
 
 const lang = getLangFromUrl(Astro.url);
@@ -10,69 +8,24 @@ const t = useTranslations(lang);
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-
-const skills = i18n.SKILLS;
 const experiences = i18n.EXPERIENCES;
-const educations = i18n.EDUCATIONS;
-const languajes = i18n.LANGUAJES;
-const projects = i18n.PROJECTS;
 ---
 
-<section class="grid grid-cols-1 tablet:grid-cols-2 gap-4 my-10">
-  <div>
-    <h2>{t("experience.experience")}</h2>
-    <div class="my-5 space-y-4">
-      {
-        experiences.map((experience) => (
-          <Expirience
-            position={experience.position}
-            company={experience.company}
-            place={experience.place}
-            date={experience.date}
-            stillWorkingThere={experience.stillWorkingThere}
-            tasks={experience.tasks}
-          />
-        ))
-      }
-    </div>
-    <h2>{t("experience.education")}</h2>
-    <div class="my-5 space-y-4">
-      {
-        educations.map((education) => (
-          <Expirience
-            position={education.carrer}
-            company={education.school}
-            place={education.place}
-            date={education.date}
-          />
-        ))
-      }
-    </div>
-  </div>
-  <div>
-    <h2>{t("experience.skills")}</h2>
-    <div class="flex gap-2 flex-wrap mt-3">
-      {skills.map((skill) => <Skills>{skill}</Skills>)}
-    </div>
-    <h2 class="mt-5">{t("experience.languaje")}</h2>
-    <div class="flex gap-2 flex-wrap mt-3 mb-16">
-      {languajes.map((languaje) => <Skills>{languaje}</Skills>)}
-    </div>
-    <h2 class="mt-5">{t("experience.projects")}</h2>
-    <div class="grid grid-cols-1 laptop:grid-cols-2 gap-4 flex-wrap mt-3 ms-1">
-      {
-        projects.map((project) => (
-          <Projects
-            title={project.title}
-            href={project.href}
-            url={project.url}
-            picture_url={project.picture_url}
-            technologies={project.technologies}
-          >
-            {project.description}
-          </Projects>
-        ))
-      }
-    </div>
+<section id="experience" class="section section-pad" aria-labelledby="experience-heading">
+  <h2 id="experience-heading">{t("experience.experience")}</h2>
+  <div class="mt-10 max-w-[760px]">
+    {
+      experiences.map((experience) => (
+        <Expirence
+          position={experience.position}
+          company={experience.company}
+          place={experience.place}
+          date={experience.date}
+          stillWorkingThere={experience.stillWorkingThere}
+          tasks={experience.tasks}
+        />
+      ))
+    }
   </div>
 </section>
+

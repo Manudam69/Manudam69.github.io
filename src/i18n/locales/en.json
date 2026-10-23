@@ -43,31 +43,60 @@
       "date": "2015 - 2020"
     }
   ],
-  "SKILLS": [
-    "TypeScript",
-    "JavaScript",
-    "Angular",
-    "AngularJS",
-    "React",
-    "Svelte",
-    "Astro",
-    "Next.js",
-    "jQuery",
-    "Tailwind",
-    "Bootstrap",
-    "Node.js",
-    "PHP",
-    "Oracle",
-    "PostgreSQL",
-    "MySQL",
-    "Docker"
+  "SKILL_GROUPS": [
+    {
+      "category": "Languages",
+      "skills": ["TypeScript", "JavaScript"]
+    },
+    {
+      "category": "Frontend",
+      "skills": [
+        "Angular",
+        "AngularJS",
+        "React",
+        "Svelte",
+        "Astro",
+        "Next.js",
+        "jQuery",
+        "Tailwind",
+        "Bootstrap"
+      ]
+    },
+    {
+      "category": "Backend",
+      "skills": ["Node.js", "PHP"]
+    },
+    {
+      "category": "Databases",
+      "skills": ["Oracle", "PostgreSQL", "MySQL"]
+    },
+    {
+      "category": "Infrastructure & Tools",
+      "skills": ["Docker"]
+    }
   ],
   "LANGUAJES": ["Spanish", "English"],
   "PROJECTS": [
     {
+      "title": "Cormati",
+      "url": "cormati.com",
+      "href": "https://cormati.com/",
+      "picture_url": "/src/assets/images/cormati.png",
+      "technologies": [
+        "TypeScript",
+        "Go",
+        "Tailwind",
+        "Svelte",
+        "PocketBase",
+        "Docker",
+        "RabbitMQ"
+      ],
+      "description": "Creates virtual agents that replicate top salespeople to serve more customers simultaneously and amplify sales results."
+    },
+    {
       "title": "Ezsecure",
-      "url": "ezsecure.com.mx",
-      "href": "https://ezsecure.com.mx",
+      "url": "ezsecure.cloud",
+      "href": "https://ezsecure.cloud",
       "picture_url": "/src/assets/images/ezsecure.png",
       "technologies": ["Angular", "Svelte", "Node.js", "PostgreSQL"],
       "description": "Ezsecure is a platform that provides comprehensive solutions for access control and security in condominiums. It simplifies management, enhances security, and provides an exceptional experience for residents and visitors."
@@ -96,22 +125,6 @@
         "React"
       ],
       "description": "Built tools and strategies to streamline campaign workflows, achieving electoral success by leveraging cutting-edge technology and earning client trust."
-    },
-    {
-      "title": "Cormati",
-      "url": "cormati.com",
-      "href": "https://cormati.com/",
-      "picture_url": "/src/assets/images/cormati.png",
-      "technologies": [
-        "TypeScript",
-        "Go",
-        "Tailwind",
-        "Svelte",
-        "PocketBase",
-        "Docker",
-        "RabbitMQ"
-      ],
-      "description": "Creates virtual agents that replicate top salespeople to serve more customers simultaneously and amplify sales results."
     }
   ]
 }
